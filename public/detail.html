@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="./stylesheets/detail.css">
+    <script src="./javascripts/pagesplit.js"></script>
+    <script src="./javascripts/jquery-1.8.1.min.js"></script>
+    <script src="./javascripts/pagesplit.js"></script>
+    <script src="./javascripts/detail.js"></script>
+    <script src="./javascripts/pageturn.js"></script>
+    <!--页面编码-->
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <!--initial-scale初始缩放比例,maximum-scale允许缩放的最大比例-->
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0">
+    <!--设置工程是否全屏运行-->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!--设置状态栏的style(black-translucent,black,default)-->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <!--用户是否可以手动缩 (no,yes)-->
+    <meta name="viewport" content="user-scalable=no, width=device-width">
+    <script>
+        $(document).ready(function () {
+            var datas = {"items":[
+                {"id":"20000286", "height":"200", "desc":"2012年10月10日，北京大兴青云店镇一处养狗所内，擂台上两只比特犬正在撕咬，他们的主人在给各自的狗鼓劲，裁判也在场上“执法”。周围围满了赌客，他们“下了外围”。今天这里共有三场比赛，赌资累计近二十万。摄影：大路/CFP", "width":"266", "lurl":"http://images.china.cn/attachement/jpg/site1000/20121016/001ec949fc8d11e70d390f.jpg", "url":"http://images.china.cn/attachement/jpg/site1000/20121016/001ec949fc8d11e70d390e.jpg"},
+                {"id":"20000470", "height":"200", "desc":"斗狗涉嫌聚众赌博。北京雄志律师事务所律师王荣香认为，赌博在中国大陆是严厉禁止的，这起赌狗行为涉及的人员多、赌资大、其行为已构成聚众赌博。根据刑法规定，以赢利为目的聚众赌博或以赌博为业的，处三年以下有期徒刑、拘役或管制，并处罚金。摄影：大路/CFP", "width":"266", "lurl":"http://images.china.cn/attachement/jpg/site1000/20121016/001ec949fc8d11e70e8315.jpg", "url":"http://images.china.cn/attachement/jpg/site1000/20121016/001ec949fc8d11e70e8314.jpg"},
+                {"id":"20000473", "height":"200", "desc":"王荣香说，《治安管理处罚法》规定，以营利为目的，为赌博提供条件的，或参与赌博赌资较大的，处五日以下拘留或者五百元以下罚款；情节严重的，处十日以上十五日以下拘留，并处五百元以上三千元以下罚款。摄影：大路/CFP", "width":"266", "lurl":"http://images.china.cn/attachement/jpg/site1000/20121016/001ec949fc8d11e70e881b.jpg", "url":"http://images.china.cn/attachement/jpg/site1000/20121016/001ec949fc8d11e70e881a.jpg"},
+                {"id":"20000475", "height":"200", "desc":"比特犬，拥有发达的肌肉，顽强的意志，惊人的耐力，一般对人友好，对同类季度残忍，往往连亲生的孩子都会咬死，甚至吃掉。多用来“打比赛”，甚至能相互不断撕咬两三个小时。摄影：大路/CFP", "width":"266", "lurl":"http://images.china.cn/attachement/jpg/site1000/20121016/001ec949fc8d11e70e8d21.jpg", "url":"http://images.china.cn/attachement/jpg/site1000/20121016/001ec949fc8d11e70e8d20.jpg"}
+                ,
+                {"id":"2000028a", "height":"200", "desc":"2012年10月10日，北京大兴青云店镇一处养狗所内，擂台上两只比特犬正在撕咬，他们的主人在给各自的狗鼓劲，裁判也在场上“执法”。周围围满了赌客，他们“下了外围”。今天这里共有三场比赛，赌资累计近二十万。摄影：大路/CFP", "width":"266", "lurl":"http://images.china.cn/attachement/jpg/site1000/20121016/001ec949fc8d11e70d390f.jpg", "url":"http://images.china.cn/attachement/jpg/site1000/20121016/001ec949fc8d11e70d390e.jpg"},
+                {"id":"2000047b", "height":"200", "desc":"斗狗涉嫌聚众赌博。北京雄志律师事务所律师王荣香认为，赌博在中国大陆是严厉禁止的，这起赌狗行为涉及的人员多、赌资大、其行为已构成聚众赌博。根据刑法规定，以赢利为目的聚众赌博或以赌博为业的，处三年以下有期徒刑、拘役或管制，并处罚金。摄影：大路/CFP", "width":"266", "lurl":"http://images.china.cn/attachement/jpg/site1000/20121016/001ec949fc8d11e70e8315.jpg", "url":"http://images.china.cn/attachement/jpg/site1000/20121016/001ec949fc8d11e70e8314.jpg"},
+                {"id":"2000047c", "height":"200", "desc":"王荣香说，《治安管理处罚法》规定，以营利为目的，为赌博提供条件的，或参与赌博赌资较大的，处五日以下拘留或者五百元以下罚款；情节严重的，处十日以上十五日以下拘留，并处五百元以上三千元以下罚款。摄影：大路/CFP", "width":"266", "lurl":"http://images.china.cn/attachement/jpg/site1000/20121016/001ec949fc8d11e70e881b.jpg", "url":"http://images.china.cn/attachement/jpg/site1000/20121016/001ec949fc8d11e70e881a.jpg"},
+                {"id":"2000047d", "height":"200", "desc":"比特犬，拥有发达的肌肉，顽强的意志，惊人的耐力，一般对人友好，对同类季度残忍，往往连亲生的孩子都会咬死，甚至吃掉。多用来“打比赛”，甚至能相互不断撕咬两三个小时。摄影：大路/CFP", "width":"266", "lurl":"http://images.china.cn/attachement/jpg/site1000/20121016/001ec949fc8d11e70e8d21.jpg", "url":"http://images.china.cn/attachement/jpg/site1000/20121016/001ec949fc8d11e70e8d20.jpg"}
+                ,
+                {"id":"2000028e", "height":"200", "desc":"2012年10月10日，北京大兴青云店镇一处养狗所内，擂台上两只比特犬正在撕咬，他们的主人在给各自的狗鼓劲，裁判也在场上“执法”。周围围满了赌客，他们“下了外围”。今天这里共有三场比赛，赌资累计近二十万。摄影：大路/CFP", "width":"266", "lurl":"http://images.china.cn/attachement/jpg/site1000/20121016/001ec949fc8d11e70d390f.jpg", "url":"http://images.china.cn/attachement/jpg/site1000/20121016/001ec949fc8d11e70d390e.jpg"},
+                {"id":"2000047f", "height":"200", "desc":"斗狗涉嫌聚众赌博。北京雄志律师事务所律师王荣香认为，赌博在中国大陆是严厉禁止的，这起赌狗行为涉及的人员多、赌资大、其行为已构成聚众赌博。根据刑法规定，以赢利为目的聚众赌博或以赌博为业的，处三年以下有期徒刑、拘役或管制，并处罚金。摄影：大路/CFP", "width":"266", "lurl":"http://images.china.cn/attachement/jpg/site1000/20121016/001ec949fc8d11e70e8315.jpg", "url":"http://images.china.cn/attachement/jpg/site1000/20121016/001ec949fc8d11e70e8314.jpg"},
+                {"id":"2000047h", "height":"200", "desc":"王荣香说，《治安管理处罚法》规定，以营利为目的，为赌博提供条件的，或参与赌博赌资较大的，处五日以下拘留或者五百元以下罚款；情节严重的，处十日以上十五日以下拘留，并处五百元以上三千元以下罚款。摄影：大路/CFP", "width":"266", "lurl":"http://images.china.cn/attachement/jpg/site1000/20121016/001ec949fc8d11e70e881b.jpg", "url":"http://images.china.cn/attachement/jpg/site1000/20121016/001ec949fc8d11e70e881a.jpg"},
+                {"id":"2000047i", "height":"200", "desc":"比特犬，拥有发达的肌肉，顽强的意志，惊人的耐力，一般对人友好，对同类季度残忍，往往连亲生的孩子都会咬死，甚至吃掉。多用来“打比赛”，甚至能相互不断撕咬两三个小时。摄影：大路/CFP", "width":"266", "lurl":"http://images.china.cn/attachement/jpg/site1000/20121016/001ec949fc8d11e70e8d21.jpg", "url":"http://images.china.cn/attachement/jpg/site1000/20121016/001ec949fc8d11e70e8d20.jpg"}
+            ]};
+            yxj_detail.main(datas, "title");
+        });
+    </script>
+</head>
+<body>
+<div id="yxjparent" class="yxjparent">
+    <div id="yxjtop" class="yxjup">
+        <div id="yxjback" class="yxjbackimg"><img class="yxjback" src="images/back.png"></div>
+        <div id="yxjup"></div>
+    </div>
+    <div id="yxjdetail" class="yxjdescriber"></div>
+    <div id="yxjbottom" class="yxjdown"></div>
+    <div id="yxjpicturediv" class="yxjpicdiv">
+
+    </div>
+</div>
+</body>
+</html>
